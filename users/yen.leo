@@ -139,6 +139,7 @@
 <v t="amd.20160727120222.1"><vh>@edit 20160921.md</vh></v>
 <v t="yen.20161022120807.1"><vh>@edit 20161022.md</vh></v>
 <v t="leo.20161027150608.1"><vh>@edit mynum_20161027.md</vh></v>
+<v t="leo.20161114155427.1"><vh>@edit 20161114.md</vh></v>
 </v>
 </v>
 </v>
@@ -150,6 +151,12 @@
 <v t="amd.20161004202833.1"><vh>@edit ../README.md</vh></v>
 <v t="yen.20161022120729.1"><vh>@button https server</vh></v>
 <v t="yen.20161022151728.1"><vh>產生 .key 與 .crt</vh></v>
+<v t="leo.20161114144204.2" a="E"><vh>Recovered Nodes</vh>
+<v t="leo.20161114144204.3"><vh>Recovered node "封面投影片內容" from @clean index.html</vh>
+<v t="leo.20161114144204.4"><vh>old:封面投影片內容</vh></v>
+<v t="leo.20161114144204.5"><vh>new:封面投影片內容</vh></v>
+</v>
+</v>
 </vnodes>
 <tnodes>
 <t tx="amd.20151215170031.1"></t>
@@ -278,7 +285,7 @@ print("hello")
 ### 虎科大機械設計工程系
 
 &lt;small&gt;
-Created by [40523220](https://github.com/s40523220/2016fallcp_hw)
+Created by [40523220](http://s40523220.github.io/2016fallcp_hw/blog/)
 &lt;/small&gt;
 
 [40523220](blog/index.html)
@@ -559,10 +566,12 @@ DEFAULT_DATE = 'fs'</t>
 </t>
 <t tx="leo.20161013184628.1">&lt;section&gt;
 @others
-&lt;/section&gt;</t>
+&lt;/section&gt;
+</t>
 <t tx="leo.20161013184753.1">&lt;section&gt;
 @others
-&lt;/section&gt;</t>
+&lt;/section&gt;
+</t>
 <t tx="leo.20161013184813.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -716,6 +725,45 @@ make.start()
 
 &lt;img src="w7/cadp_w7_fourbar.png" width= "800" /&gt;
 </t>
+<t tx="leo.20161114144204.2"></t>
+<t tx="leo.20161114144204.3">(uncached) amd.20161004095719.2
+Diff...
+  ## 2016Fall 電腦輔助設計實習課程
+  
+  ### 虎科大機械設計工程系
+  
+  &lt;small&gt;
+- Created by [40523220](http://s40523220.github.io/2016fallcp_hw/blog/)
+?                                       ----------              ------
++ Created by [40523220](https://github.com/s40523220/2016fallcp_hw)
+?                           +  +++++++++++
+  &lt;/small&gt;
+  
+  [40523220](blog/index.html)
+  
+</t>
+<t tx="leo.20161114144204.4">## 2016Fall 電腦輔助設計實習課程
+
+### 虎科大機械設計工程系
+
+&lt;small&gt;
+Created by [40523220](https://github.com/s40523220/2016fallcp_hw)
+&lt;/small&gt;
+
+[40523220](blog/index.html)
+
+</t>
+<t tx="leo.20161114144204.5">## 2016Fall 電腦輔助設計實習課程
+
+### 虎科大機械設計工程系
+
+&lt;small&gt;
+Created by [40523220](http://s40523220.github.io/2016fallcp_hw/blog/)
+&lt;/small&gt;
+
+[40523220](blog/index.html)
+
+</t>
 <t tx="yen.20161016024324.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -737,7 +785,8 @@ make.start()
 </t>
 <t tx="yen.20161016024407.1">&lt;section&gt;
 @others
-&lt;/section&gt;</t>
+&lt;/section&gt;
+</t>
 <t tx="yen.20161016024407.2">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -836,7 +885,8 @@ make.start()
 * 上課筆記與心得寫在個人的 2016fallcadp_hw 倉儲 Wiki 中
 * 利用 [ShareX](https://getsharex.com/) 錄製上課操作練習影片
 * 將影片加上說明字幕後, 上傳至個人 [Vimeo](https://vimeo.com/) 與 [Youtube](https://www.youtube.com)
-* 每週更新個人與分組的 Github Pages 投影片與網誌</t>
+* 每週更新個人與分組的 Github Pages 投影片與網誌
+</t>
 <t tx="yen.20161016203728.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
