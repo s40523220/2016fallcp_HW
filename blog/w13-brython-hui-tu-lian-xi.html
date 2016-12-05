@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>W11 Brython 繪圖範例 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
+    <title>W13 Brython 繪圖練習 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,18 +166,18 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="./w11-brython-hui-tu-fan-li.html">
+<link rel="canonical" href="./w13-brython-hui-tu-lian-xi.html">
 
         <meta name="author" content="yen" />
         <meta name="keywords" content="Brython" />
-        <meta name="description" content="Brython 繪圖 繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖" />
+        <meta name="description" content="Brython 繪圖" />
 
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="W11 Brython 繪圖範例"/>
-        <meta property="og:url" content="./w11-brython-hui-tu-fan-li.html"/>
-        <meta property="og:description" content="Brython 繪圖 繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖"/>
-        <meta property="article:published_time" content="2016-11-21" />
+        <meta property="og:title" content="W13 Brython 繪圖練習"/>
+        <meta property="og:url" content="./w13-brython-hui-tu-lian-xi.html"/>
+        <meta property="og:description" content="Brython 繪圖"/>
+        <meta property="article:published_time" content="2016-12-05" />
             <meta property="article:section" content="Course" />
             <meta property="article:tag" content="Brython" />
             <meta property="article:author" content="yen" />
@@ -290,10 +290,10 @@ init_mathjax();
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./w11-brython-hui-tu-fan-li.html"
+                    <a href="./w13-brython-hui-tu-lian-xi.html"
                        rel="bookmark"
-                       title="Permalink to W11 Brython 繪圖範例">
-                        W11 Brython 繪圖範例
+                       title="Permalink to W13 Brython 繪圖練習">
+                        W13 Brython 繪圖練習
                     </a>
                 </h1>
             </header>
@@ -303,7 +303,7 @@ init_mathjax();
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-11-21T12:00:00+08:00"> 週一 21 十一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-12-05T12:00:00+08:00"> 週一 05 十二月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="./author/yen.html"><i class="fa fa-user"></i> yen</a>
@@ -316,9 +316,10 @@ init_mathjax();
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>Brython 繪圖</p>
-<p>繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖</p>
 
 
+<p>繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖.</p>
+<p>以下利用函式定義進行和弦底稿繪圖:</p>
 <!-- 導入 Brython 標準程式庫 -->
 
 <script type="text/javascript" 
@@ -333,23 +334,19 @@ brython(1);
 }
 </script>
 
-<!-- 以下實際利用  Brython 畫方格線 -->
+<!-- 以下實際利用  Brython 畫圖 -->
 
-<canvas id="japanflag3" width="600" height="300"></canvas>
-
-<div id="container3"></div>
+<canvas id="chord1" width="600" height="400"></canvas>
 
 <script type="text/python3">
 from browser import document as doc
-from browser import html
 import math
-import re
 # 準備繪圖畫布
-canvas = doc["japanflag3"]
-container = doc["container3"]
+canvas = doc["chord1"]
 ctx = canvas.getContext("2d")
-# 以下可以利用 ctx 物件進行畫圖
 
+'''
+# 改用 background 函式繪圖
 # 水平線
 for i in range(5):
     ctx.beginPath()
@@ -376,86 +373,172 @@ for i in range(6):
     ctx.strokeStyle = "blue"
     ctx.stroke()
     ctx.closePath()
-
-# 1 與 A7
-ctx.beginPath()
-ctx.fillStyle = 'black'
-ctx.strokeStyle = "black"
-ctx.font = "30px Arial"
-ctx.fillText("A7", 100, 70)
-ctx.arc(120, 130, 9, 0, 2*math.pi, False)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-ctx.beginPath()
-ctx.fillStyle = 'white'
-ctx.font = "16px Arial"
-ctx.fillText("1", 115, 135)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-# 3
-ctx.beginPath()
-ctx.fillStyle = 'black'
-ctx.strokeStyle = "black"
-ctx.arc(140, 160, 9, 0, 2*math.pi, False)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-ctx.beginPath()
-ctx.fillStyle = 'white'
-ctx.font = "16px Arial"
-ctx.fillText("3",135, 165)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-# 4
-ctx.beginPath()
-ctx.fillStyle = 'black'
-ctx.strokeStyle = "black"
-ctx.arc(180, 190, 9, 0, 2*math.pi, False)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-ctx.beginPath()
-ctx.fillStyle = 'white'
-ctx.font = "16px Arial"
-ctx.fillText("4", 175, 195)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-# 2
-ctx.beginPath()
-ctx.fillStyle = 'black'
-ctx.strokeStyle = "black"
-ctx.arc(100, 130, 9, 0, 2*math.pi, False)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-ctx.beginPath()
-ctx.fillStyle = 'white'
-ctx.font = "16px Arial"
-ctx.fillText("2", 95, 135)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
 '''
-# 以下將 canvas 畫布內容轉為 img tag, 並且顯示在 container 物件
-img = canvas.toDataURL("image/png")
-# 利用 re.sub, 將原本要直接開圖檔的 data:image 標頭, 改為 data:application/octet-stream, 可直接下載存檔
-# 使用 re 模組之前必須先 import re
-img = re.sub("^data:image\/[^;]", "data:application/octet-stream", img)
-# 宣告 anchor markup attribute download, 可以指定下載儲存檔名
-container <= html.A("save image", href=img, download="guitar_chord.png")
-'''
+def canvasText(x, y, fontSize, string, sup, sub, color, ctx):
+    # 標定各弦音符號, 以及把位編號
+    ctx.beginPath()
+    ctx.fillStyle = color
+    ctx.strokeStyle = color
+    #ctx.font = "20px Arial"
+    ctx.font = str(fontSize)+ "px Arial"
+    ctx.fillText(string, x, y)
+    ctx.font = str(fontSize-8)+ "px Arial"
+    if sup != "":
+        ctx.fillText(sup, x+fontSize/1.6, y-fontSize/2)
+    if sub != "":
+        ctx.fillText(sup, x+fontSize/1.6, y)
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+
+# 設法利用運算印出吉他各把位的音名
+def doreme(x, y, fontSize, order, ctx):
+    # EADGBE (guitar string)
+    # FgGaAbBCdDeE (C=Do, D=Re, E=Mi)
+    #簡譜 1 2 3 4 5 6 7 
+    #音名 C D E F G A B 
+    #唱名 Do Re Mi Fa Sol La Ti 
+
+    # 讓音名數列可以每 12 音名後, 升高 key 後從頭開始
+    if order > 12:
+        order = order % 12
+
+    if order == 1:
+        canvasText(x, y, fontSize, "A", "", "", "black", ctx)
+    elif order ==2:
+        canvasText(x, y, fontSize, "B", "b", "", "red", ctx)
+    elif order == 3:
+        canvasText(x, y, fontSize, "B", "", "", "black", ctx)
+    elif order == 4:
+        canvasText(x, y, fontSize, "C", "", "", "black", ctx)
+    elif order == 5:
+        canvasText(x, y, fontSize, "D", "b", "", "red", ctx)
+    elif order == 6:
+        canvasText(x, y, fontSize, "D", "", "", "black", ctx)
+    elif order == 7:
+        canvasText(x, y, fontSize, "E", "b", "", "red", ctx)
+    elif order == 8:
+        canvasText(x, y, fontSize, "E", "", "", "black", ctx)
+    elif order == 9:
+        canvasText(x, y, fontSize, "F", "", "", "black", ctx)
+    elif order == 10:
+        canvasText(x, y, fontSize, "G", "b", "", "red", ctx)
+    elif order == 11:
+        canvasText(x, y, fontSize, "G", "", "", "black", ctx)
+    elif order == 12:
+        canvasText(x, y, fontSize, "A", "b", "", "red", ctx)
+    else:
+        canvasText(x, y, fontSize, "Error", "", "", "red", ctx)
+
+def background(x, y, xinc, yinc, xnum, ynum, ctx):
+    # 水平線
+    for i in range(ynum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        if i == 0:
+            ctx.lineWidth = 7
+        else:
+            ctx.lineWidth = 1
+        ctx.moveTo(x-1, y+i*yinc)
+        ctx.lineTo(x+xnum*xinc+1, y+i*yinc)
+        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
+
+    # 垂直線
+    for i in range(xnum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        ctx.lineWidth = 1
+        ctx.moveTo(x+i*xinc, y)
+        ctx.lineTo(x+i*xinc, y+ynum*yinc)
+        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
+    # 標定各弦音符號, 以及把位編號
+    ctx.beginPath()
+    ctx.fillStyle = 'black'
+    ctx.strokeStyle = "black"
+    ctx.font = "20px Arial"
+    sixString = ["E", "A", "D", "G", "B", "E"]
+    stringNum = 0
+    for i in sixString:
+        ctx.fillText(i, x-7+stringNum*xinc, y-30)
+        stringNum = stringNum + 1
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+    # EADGBE (guitar string)
+    # FgGaAbBCdDeE (C=Do, D=Re, E=Mi)
+    canvasText(x, y-50, 20, "A", "", "", "black", ctx)
+    canvasText(x+xinc, y-50, 20, "B", "b", "", "red", ctx)
+    canvasText(x+xinc*2, y-50, 20, "B", "", "", "black", ctx)
+    canvasText(x+xinc*3, y-50, 20, "C", "", "", "black", ctx)
+    canvasText(x+xinc*4, y-50, 20, "D", "b", "", "red", ctx)
+    canvasText(x+xinc*5, y-50, 20, "D", "", "", "black", ctx)
+    canvasText(x+xinc*6, y-50, 20, "E", "b", "", "red", ctx)
+    canvasText(x+xinc*7, y-50, 20, "E", "", "", "black", ctx)
+    canvasText(x+xinc*8, y-50, 20, "F", "", "", "black", ctx)
+    canvasText(x+xinc*9, y-50, 20, "G", "b", "", "red", ctx)
+    canvasText(x+xinc*10, y-50, 20, "G", "", "", "black", ctx)
+    canvasText(x+xinc*11, y-50, 20, "A", "b", "", "red", ctx)
+    ####################################
+    # 以下利用數列運算, 從已知第1把位的音名分別推算各把位的音名
+    # 吉他初始音名次序 816(11)38
+    ####################################
+    firstBar = [8, 1, 6, 11, 3, 8]
+    # j 為往下增量
+    for j in range(4):
+        # k 為 往右把位初始值
+        fontSize = 15 
+        for k in range(6):
+            bx = x + (k)*w - fontSize/3
+            by = y + (j)*h+h/2 + fontSize/2
+            order = firstBar[k] + j + 1
+            doreme(bx, by, fontSize, order, ctx)
+
+
+# 一開始 x, y 為圓球圓心, 但是為了配合和弦繪圖
+# 將 x, y 改為和弦的左上角座標 x, y
+# 配合 w, h, wcoord, hcoord 進行運算得到圓的圓心座標 bx, by
+#def ball(x, y, w, h , wcoord, hcoord, r, color, ctx):
+def ball(x, y, w, h , wcoord, hcoord, color, ctx):
+    bx = x + (wcoord-1)*w
+    by = y + (hcoord-1)*h+h/2
+    if w < h:
+        r2 = w/2 -2
+    else:
+        r2 = h/2 -2
+    ctx.beginPath()
+    #ctx.fillStyle = 'black'
+    ctx.fillStyle = color
+    #ctx.strokeStyle = "black"
+    ctx.strokeStyle = color
+    #ctx.arc(50, 80, 9, 0, 2*math.pi, False)
+    ctx.arc(bx, by, r2, 0, 2*math.pi, False)
+    # 為了疊上各把位的音名, 暫時不填色
+    #ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+
+x = 300
+y = 200
+w = 20
+h = 30
+# 將前面的水平線與垂直線繪圖改用 background 繪圖
+background(100, 100, w, h, 5, 4, ctx)
+background(x, y, w, h, 5, 4, ctx)
+#background(100, 300, 10, 10, 5, 4, ctx)
+#background(300, 100, 10, 10, 5, 12, ctx)
+# 配合  300, 300 的和絃背景, w=30, h=30, (1,1) 位置放入圓
+for i in range( 6):
+    for j in range(3):
+        ball(x, y, w, h, i+1, j+1, 'black', ctx)
+ball(x, y, w, h, 1, 4, 'red', ctx)
+#ball(300, 300, 30, 20, 1, 1, 9, 'black', ctx)
+
 </script>
             </div>
             <!-- /.entry-content -->
