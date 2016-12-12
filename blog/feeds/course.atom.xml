@@ -16,8 +16,6 @@ brython(1);
 }
 &lt;/script&gt;
 
-&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
-
 &lt;div id="ex1"&gt;&lt;/div&gt;
 
 &lt;script type="text/python3"&gt;
@@ -25,6 +23,20 @@ from browser import document as doc
 container=doc['ex1']
 
 container&lt;="w14練習"
+&lt;/script&gt;
+
+&lt;div id="ex2"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+container = doc['ex2']
+mystring = input("要印出甚麼字串?")
+mynum = input("要印幾次?")
+
+for i in range(int(mynum)):
+    #container&lt;="W14練習-2"+html.BR()
+    container&lt;=mystring+html.BR()
 &lt;/script&gt;</summary><category term="每周練習"></category></entry><entry><title>W13 Brython 繪圖練習</title><link href="./w13-brython-hui-tu-lian-xi.html" rel="alternate"></link><published>2016-12-05T12:00:00+08:00</published><updated>2016-12-05T12:00:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-12-05:./w13-brython-hui-tu-lian-xi.html</id><summary type="html">&lt;p&gt;Brython 繪圖&lt;/p&gt;
 
 
