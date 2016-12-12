@@ -160,6 +160,7 @@
 <v t="leo.20161114144204.4"><vh>old:封面投影片內容</vh></v>
 <v t="leo.20161114144204.5"><vh>new:封面投影片內容</vh></v>
 </v>
+<v t="leo.20161212143136.1"><vh>@button https server</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -768,6 +769,28 @@ Created by [40523220](http://s40523220.github.io/2016fallcp_hw/blog/)
 [40523220](blog/index.html)
 
 </t>
+<t tx="leo.20161212143136.1">@language python
+import os
+import subprocess
+import threading
+import http.server, ssl
+
+def domake():
+    # build directory
+    os.chdir("./../")
+    server_address = ('localhost', 6443)
+    httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
+    httpd.socket = ssl.wrap_socket(httpd.socket,
+                                   server_side=True,
+                                   certfile='localhost.crt',
+                                   keyfile='localhost.key',
+                                   ssl_version=ssl.PROTOCOL_TLSv1)
+    print("5443 https server started")
+    httpd.serve_forever()
+
+# 利用執行緒執行 https 伺服器
+make = threading.Thread(target=domake)
+make.start()</t>
 <t tx="yen.20161016024324.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
