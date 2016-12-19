@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/course.atom.xml" rel="self"></link><id>./</id><updated>2016-12-12T14:35:00+08:00</updated><entry><title>W14 練習</title><link href="./w14-lian-xi.html" rel="alternate"></link><published>2016-12-12T14:35:00+08:00</published><updated>2016-12-12T14:35:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-12-12:./w14-lian-xi.html</id><summary type="html">&lt;p&gt;以下為第14周開始的程式練習,要利用&lt;a href="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 中的內容,整理Brython的用法&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/course.atom.xml" rel="self"></link><id>./</id><updated>2016-12-19T14:15:00+08:00</updated><entry><title>W15 影片心得</title><link href="./w15-ying-pian-xin-de.html" rel="alternate"></link><published>2016-12-19T14:15:00+08:00</published><updated>2016-12-19T14:15:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-12-19:./w15-ying-pian-xin-de.html</id><summary type="html">&lt;p&gt;以下為第14周週影片心得&lt;/p&gt;
+
+
+&lt;p&gt;leo 檔案 settings節點用法:使用2個節點設定頁面&lt;/p&gt;
+&lt;p&gt;(1)ctrl u , (2)ctrl d , (3)ctrl l , (4)ctrl r , (5)ctrl i等指令用法:(1)把子節點上移一格(2)把子節點下移一格(3)把子節點左移一格(4)把子節點右移一格(5)建立新的子節點&lt;/p&gt;
+&lt;p&gt;button的功能:轉檔&lt;/p&gt;</summary><category term="W14影片心得"></category></entry><entry><title>W14 練習</title><link href="./w14-lian-xi.html" rel="alternate"></link><published>2016-12-12T14:35:00+08:00</published><updated>2016-12-12T14:35:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-12-12:./w14-lian-xi.html</id><summary type="html">&lt;p&gt;以下為第14周開始的程式練習,要利用&lt;a href="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 中的內容,整理Brython的用法&lt;/p&gt;
 
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;

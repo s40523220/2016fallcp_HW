@@ -5,6 +5,12 @@
 &lt;p&gt;&lt;img src="./../w7/cadp_w7_fourbar.png" width="600" /&gt;&lt;/p&gt;
 &lt;p&gt;Solvespace 四連桿圖檔:&lt;/p&gt;
 &lt;p&gt;&lt;a href="./../w7/w7_fourbar.slvs"&gt;w7_fourbar.slvs&lt;/a&gt; (請以滑鼠右鍵存檔)&lt;/p&gt;
+&lt;p&gt;參考: &lt;a href="http://mechanicalexpressions.com/explore/kinematics/4-bar-linkage.html"&gt;http://mechanicalexpressions.com/explore/kinematics/4-bar-linkage.html&lt;/a&gt;&lt;/p&gt;</summary><category term="fourbar"></category></entry><entry><title>2016Fall w7 四連桿機構模擬</title><link href="./2016fall-w7-si-lian-gan-ji-gou-mo-ni.html" rel="alternate"></link><published>2016-10-27T12:00:00+08:00</published><updated>2016-10-27T12:00:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-10-27:./2016fall-w7-si-lian-gan-ji-gou-mo-ni.html</id><summary type="html">&lt;p&gt;已經四連桿各桿尺寸, 當機構繞行一圈後求特定點的座標, 以 Solvespace 進行點座標追蹤存檔, 得到 &lt;a href="./../w7/w7_fourbar.csv"&gt;w7_fourbar.csv&lt;/a&gt;, 根據下圖, 試驗證 Solvespace 機構模擬的資料之正確性.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;img src="./../w7/cadp_w7_fourbar.png" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Solvespace 四連桿圖檔:&lt;/p&gt;
+&lt;p&gt;&lt;a href="./../w7/w7_fourbar.slvs"&gt;w7_fourbar.slvs&lt;/a&gt; (請以滑鼠右鍵存檔)&lt;/p&gt;
 &lt;p&gt;參考: &lt;a href="http://mechanicalexpressions.com/explore/kinematics/4-bar-linkage.html"&gt;http://mechanicalexpressions.com/explore/kinematics/4-bar-linkage.html&lt;/a&gt;&lt;/p&gt;</summary><category term="fourbar"></category></entry><entry><title>2016Fall 程式練習題</title><link href="./2016fall-cheng-shi-lian-xi-ti.html" rel="alternate"></link><published>2016-10-22T12:00:00+08:00</published><updated>2016-10-22T12:00:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-10-22:./2016fall-cheng-shi-lian-xi-ti.html</id><summary type="html">&lt;p&gt;已知截至第六週 2016fallcadpa 的分組資料位於倉儲中的 &lt;a href="./../w6_group.txt"&gt;w6_group.txt&lt;/a&gt;, 而從學校修課系統下載的修課人員名條則為 &lt;a href="./../w6_list.txt"&gt;w6_list.txt&lt;/a&gt;, 請各組著手練習, 找出尚未納入分組的人員名單, 並研擬如何處置上課一個半月卻尚未進入情況的學員?&lt;/p&gt;
 
 
@@ -89,7 +95,7 @@ for i in not_in_group:
 
 
 &lt;h1&gt;機械設計主題教學&lt;/h1&gt;
-&lt;p&gt;創造力三元素, 機械設計的六種表達, 協同設計的四大面向.&lt;/p&gt;
+&lt;p&gt;創造力三元素, 機械設計的六種表達方式, 協同設計的四大方向.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;強化創造能力 - 自學力、程式力與想像力
 (Creative Competencies)&lt;/li&gt;
@@ -98,82 +104,6 @@ for i in not_in_group:
 &lt;li&gt;融入協同設計 - 電腦、網路、軟硬體工具與協同專案
 (Collaborative Designs)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;2016 Fall CADP A 分組網頁:&lt;/p&gt;
-&lt;p&gt;&lt;a href='../g1'&gt;第1組&lt;/a&gt;:&lt;br /&gt;
-&lt;a href='../g1/40223103'&gt;40223103&lt;/a&gt; 
-&lt;a href='../g1/40223109'&gt;40223109&lt;/a&gt; 
-&lt;a href='../g1/40423111'&gt;40423111&lt;/a&gt; 
-&lt;a href='../g1/40443111'&gt;40443111&lt;/a&gt; 
-&lt;br /&gt;
-&lt;a href='../g2'&gt;第2組&lt;/a&gt;:&lt;br /&gt;
-&lt;a href='../g2/40423101'&gt;40423101&lt;/a&gt; 
-&lt;a href='../g2/40423103'&gt;40423103&lt;/a&gt; 
-&lt;a href='../g2/40423104'&gt;40423104&lt;/a&gt; 
-&lt;a href='../g2/40423117'&gt;40423117&lt;/a&gt; 
-&lt;a href='../g2/40423136'&gt;40423136&lt;/a&gt; 
-&lt;a href='../g2/40423144'&gt;40423144&lt;/a&gt; 
-&lt;br /&gt;
-&lt;a href='../g3'&gt;第3組&lt;/a&gt;:&lt;br /&gt;
-&lt;a href='../g3/40423105'&gt;40423105&lt;/a&gt; 
-&lt;a href='../g3/40423115'&gt;40423115&lt;/a&gt; 
-&lt;a href='../g3/40423119'&gt;40423119&lt;/a&gt; 
-&lt;a href='../g3/40423128'&gt;40423128&lt;/a&gt; 
-&lt;a href='../g3/40423139'&gt;40423139&lt;/a&gt; 
-&lt;a href='../g3/40423149'&gt;40423149&lt;/a&gt; 
-&lt;br /&gt;
-&lt;a href='../g4'&gt;第4組&lt;/a&gt;:&lt;br /&gt;
-&lt;a href='../g4/40423106'&gt;40423106&lt;/a&gt; 
-&lt;a href='../g4/40423107'&gt;40423107&lt;/a&gt; 
-&lt;a href='../g4/40423108'&gt;40423108&lt;/a&gt; 
-&lt;a href='../g4/40423121'&gt;40423121&lt;/a&gt; 
-&lt;a href='../g4/40423125'&gt;40423125&lt;/a&gt; 
-&lt;a href='../g4/40423140'&gt;40423140&lt;/a&gt; 
-&lt;br /&gt;
-&lt;a href='../g5'&gt;第5組&lt;/a&gt;:&lt;br /&gt;
-&lt;a href='../g5/40423109'&gt;40423109&lt;/a&gt; 
-&lt;a href='../g5/40423110'&gt;40423110&lt;/a&gt; 
-&lt;a href='../g5/40423113'&gt;40423113&lt;/a&gt; 
-&lt;a href='../g5/40423130'&gt;40423130&lt;/a&gt; 
-&lt;a href='../g5/40423131'&gt;40423131&lt;/a&gt; 
-&lt;a href='../g5/40423138'&gt;40423138&lt;/a&gt; 
-&lt;br /&gt;
-&lt;a href='../g6'&gt;第6組&lt;/a&gt;:&lt;br /&gt;
-&lt;a href='../g6/40423112'&gt;40423112&lt;/a&gt; 
-&lt;a href='../g6/40423116'&gt;40423116&lt;/a&gt; 
-&lt;a href='../g6/40423118'&gt;40423118&lt;/a&gt; 
-&lt;a href='../g6/40423127'&gt;40423127&lt;/a&gt; 
-&lt;a href='../g6/40423137'&gt;40423137&lt;/a&gt; 
-&lt;a href='../g6/40423152'&gt;40423152&lt;/a&gt; 
-&lt;br /&gt;
-&lt;a href='../g7'&gt;第7組&lt;/a&gt;:&lt;br /&gt;
-&lt;a href='../g7/40423114'&gt;40423114&lt;/a&gt; 
-&lt;a href='../g7/40423115'&gt;40423115&lt;/a&gt; 
-&lt;a href='../g7/40423120'&gt;40423120&lt;/a&gt; 
-&lt;a href='../g7/40423122'&gt;40423122&lt;/a&gt; 
-&lt;a href='../g7/40423124'&gt;40423124&lt;/a&gt; 
-&lt;br /&gt;
-&lt;a href='../g8'&gt;第8組&lt;/a&gt;:&lt;br /&gt;
-&lt;a href='../g8/40423123'&gt;40423123&lt;/a&gt; 
-&lt;a href='../g8/40423129'&gt;40423129&lt;/a&gt; 
-&lt;a href='../g8/40423132'&gt;40423132&lt;/a&gt; 
-&lt;a href='../g8/40423133'&gt;40423133&lt;/a&gt; 
-&lt;a href='../g8/40423155'&gt;40423155&lt;/a&gt; 
-&lt;a href='../g8/40423157'&gt;40423157&lt;/a&gt; 
-&lt;br /&gt;
-&lt;a href='../g9'&gt;第9組&lt;/a&gt;:&lt;br /&gt;
-&lt;a href='../g9/40423126'&gt;40423126&lt;/a&gt; 
-&lt;a href='../g9/40423135'&gt;40423135&lt;/a&gt; 
-&lt;a href='../g9/40423150'&gt;40423150&lt;/a&gt; 
-&lt;a href='../g9/40423154'&gt;40423154&lt;/a&gt; 
-&lt;br /&gt;
-&lt;a href='../g10'&gt;第10組&lt;/a&gt;:&lt;br /&gt;
-&lt;a href='../g10/40423141'&gt;40423141&lt;/a&gt; 
-&lt;a href='../g10/40423143'&gt;40423143&lt;/a&gt; 
-&lt;a href='../g10/40423145'&gt;40423145&lt;/a&gt; 
-&lt;a href='../g10/40423146'&gt;40423146&lt;/a&gt; 
-&lt;a href='../g10/40423147'&gt;40423147&lt;/a&gt; 
-&lt;a href='../g10/40423148'&gt;40423148&lt;/a&gt; 
-&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;以下為分組資料處理程式:&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
 content = open("2016fall_cadp_a_groups.txt").read()
