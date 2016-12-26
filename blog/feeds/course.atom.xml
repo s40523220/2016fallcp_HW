@@ -28,7 +28,21 @@ import random
 #print("test")
 #alert("test")
 con1=document["con"]
-標準答案 = random.randint(1, 2)
+標準答案 = random.randint(1, 100)
+你猜的數字=int(input("請輸入你所猜的整數:"))
+猜測次數 = 1
+while 標準答案 != 你猜的數字:
+    if 標準答案 &lt; 你猜的數字:
+        print("太大了 , 在猜一次:)加油")
+    else:
+        print("太小了 , 在猜一次:)加油")
+    你猜的數字=int(input("請輸入你所猜的整數:"))
+    猜測次數 += 1
+
+print("猜對了 ! 總共猜了",猜測次數, "次")
+
+'''   
+'''
 con1 &lt;= str(標準答案)
 '''
 try:
@@ -40,8 +54,13 @@ try:
         con1 &lt;= "你輸入的整數加上1之後,為" +str(output)
 except:
     con1 &lt;= "拜託請輸入整數!"
+'''
+def b1(e):
+    alert("click123")
+document["b1"].bind("click", b1)
+&lt;/script&gt;
 
-&lt;/script&gt;</summary><category term="遊戲"></category></entry><entry><title>W15 影片心得</title><link href="./w15-ying-pian-xin-de.html" rel="alternate"></link><published>2016-12-19T14:15:00+08:00</published><updated>2016-12-19T14:15:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-12-19:./w15-ying-pian-xin-de.html</id><summary type="html">&lt;p&gt;以下為第14周週影片心得&lt;/p&gt;
+&lt;p&gt;&lt;button id="b1"&gt;玩猜數字遊戲&lt;/button&gt;&lt;/p&gt;</summary><category term="遊戲"></category></entry><entry><title>W15 影片心得</title><link href="./w15-ying-pian-xin-de.html" rel="alternate"></link><published>2016-12-19T14:15:00+08:00</published><updated>2016-12-19T14:15:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-12-19:./w15-ying-pian-xin-de.html</id><summary type="html">&lt;p&gt;以下為第14周週影片心得&lt;/p&gt;
 
 
 &lt;p&gt;leo 檔案 settings節點用法:使用2個節點設定頁面&lt;/p&gt;
