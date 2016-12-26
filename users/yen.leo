@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="leo.20151212173315.1" a="E"><vh>@settings</vh>
+<v t="leo.20151212173315.1"><vh>@settings</vh>
 <v t="leo.20151212173315.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="leo.20151212173315.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
@@ -19,7 +19,7 @@
 <v t="leo.20151213085727.1"><vh>@button pelican-blog</vh></v>
 </v>
 <v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
-<v t="amd.20151216151325.1" a="E"><vh>@clean index.html</vh>
+<v t="amd.20151216151325.1"><vh>@clean index.html</vh>
 <v t="amd.20161004083800.1" a="E"><vh>html</vh>
 <v t="amd.20161004083800.2"><vh>head</vh></v>
 <v t="amd.20161004083800.5" a="E"><vh>body</vh>
@@ -28,7 +28,7 @@
 <v t="amd.20161004095719.1" a="E"><vh>封面投影片</vh>
 <v t="amd.20161004095719.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="yen.20161016024324.1"><vh>快捷鍵</vh>
+<v t="yen.20161016024324.1" a="E"><vh>快捷鍵</vh>
 <v t="yen.20161016024324.2"><vh>投影片快捷鍵</vh></v>
 </v>
 <v t="leo.20161013151511.1"><vh>三大主題教學</vh>
@@ -65,8 +65,8 @@
 <v t="yen.20161016024451.7"><vh>下載可攜程式環境</vh></v>
 </v>
 </v>
-<v t="leo.20161013184628.1" a="E"><vh>電腦輔助設計課程內涵</vh>
-<v t="amd.20161004112026.1" a="E"><vh>電腦輔助設計課程內涵</vh>
+<v t="leo.20161013184628.1"><vh>電腦輔助設計課程內涵</vh>
+<v t="amd.20161004112026.1"><vh>電腦輔助設計課程內涵</vh>
 <v t="amd.20161004112026.2"><vh>CAD 教學主題</vh></v>
 </v>
 <v t="leo.20161013152737.1"><vh>Github pages 網頁</vh>
@@ -105,7 +105,7 @@
 <v t="yen.20161016024407.7"><vh>Github 倉儲拉回請求</vh></v>
 </v>
 </v>
-<v t="leo.20161013184753.1" a="E"><vh>各式內容引用範例</vh>
+<v t="leo.20161013184753.1"><vh>各式內容引用範例</vh>
 <v t="leo.20161013184813.1" a="E"><vh>導入數學符號與方程式</vh>
 <v t="leo.20161013184813.2"><vh>LaTeX 格式方程式</vh></v>
 </v>
@@ -145,6 +145,7 @@
 <v t="leo.20161205150242.1"><vh>@edit 20161205.md</vh></v>
 <v t="leo.20161212140003.1"><vh>@edit 20161212.md</vh></v>
 <v t="leo.20161219141307.1"><vh>@edit 20161219.md</vh></v>
+<v t="leo.20161226134643.1"><vh>@edit 20161226.md</vh></v>
 </v>
 </v>
 </v>
@@ -959,7 +960,7 @@ import http.server, ssl
 def domake():
     # build directory
     os.chdir("./../")
-    server_address = ('localhost', 7443)
+    server_address = ('localhost', 6443)
     httpd = http.server.HTTPServer(server_address, http.server.SimpleHTTPRequestHandler)
     httpd.socket = ssl.wrap_socket(httpd.socket,
                                    server_side=True,
