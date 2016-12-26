@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>W11 Brython 繪圖範例 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
+    <title>W16 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,21 +166,21 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="./w11-brython-hui-tu-fan-li.html">
+<link rel="canonical" href="./w16.html">
 
-        <meta name="author" content="yen" />
-        <meta name="keywords" content="Brython" />
-        <meta name="description" content="Brython 繪圖 繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖" />
+        <meta name="author" content="40523220" />
+        <meta name="keywords" content="遊戲" />
+        <meta name="description" content="w16 遊戲程式練習" />
 
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="W11 Brython 繪圖範例"/>
-        <meta property="og:url" content="./w11-brython-hui-tu-fan-li.html"/>
-        <meta property="og:description" content="Brython 繪圖 繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖"/>
-        <meta property="article:published_time" content="2016-11-21" />
+        <meta property="og:title" content="W16"/>
+        <meta property="og:url" content="./w16.html"/>
+        <meta property="og:description" content="w16 遊戲程式練習"/>
+        <meta property="article:published_time" content="2016-12-26" />
             <meta property="article:section" content="Course" />
-            <meta property="article:tag" content="Brython" />
-            <meta property="article:author" content="yen" />
+            <meta property="article:tag" content="遊戲" />
+            <meta property="article:author" content="40523220" />
 
 
     <!-- Bootstrap -->
@@ -290,10 +290,10 @@ init_mathjax();
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./w11-brython-hui-tu-fan-li.html"
+                    <a href="./w16.html"
                        rel="bookmark"
-                       title="Permalink to W11 Brython 繪圖範例">
-                        W11 Brython 繪圖範例
+                       title="Permalink to W16">
+                        W16
                     </a>
                 </h1>
             </header>
@@ -303,20 +303,19 @@ init_mathjax();
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-11-21T12:00:00+08:00"> 週一 21 十一月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-12-26T14:15:00+08:00"> 週一 26 十二月 2016</time>
     </span>
             <span class="label label-default">By</span>
-            <a href="./author/yen.html"><i class="fa fa-user"></i> yen</a>
+            <a href="./author/40523220.html"><i class="fa fa-user"></i> 40523220</a>
 
 
 
 <span class="label label-default">Tags</span>
-	<a href="./tag/brython.html">Brython</a>
+	<a href="./tag/you-xi.html">遊戲</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Brython 繪圖</p>
-<p>繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖</p>
+                <p>w16 遊戲程式練習</p>
 
 
 <!-- 導入 Brython 標準程式庫 -->
@@ -333,129 +332,27 @@ brython(1);
 }
 </script>
 
-<!-- 以下實際利用  Brython 畫方格線 -->
+<!-- 以下實際利用  Brython 畫圖 -->
 
-<canvas id="japanflag3" width="600" height="300"></canvas>
-
-<div id="container3"></div>
+<div id="con"></div>
 
 <script type="text/python3">
-from browser import document as doc
+from browser import alert
+from browser import document
 from browser import html
-import math
-import re
-# 準備繪圖畫布
-canvas = doc["japanflag3"]
-container = doc["container3"]
-ctx = canvas.getContext("2d")
-# 以下可以利用 ctx 物件進行畫圖
+#print("test")
+#alert("test")
+con1=document["con"]
+try:
+    for i in range(1):
+        #con1<="test" +"<br/>"
+        yourInput=int(input("請輸入一個整數!"))
+        con1<="test" +html.BR()
+        output = yourInput + 1
+        con1 <= "你輸入的整數加上1之後,為" +str(output)
+except:
+    con1 <= "拜託請輸入整數!"
 
-# 水平線
-for i in range(5):
-    ctx.beginPath()
-# 設定線的寬度為 1 個單位
-    if i == 0:
-        ctx.lineWidth = 7
-    else:
-        ctx.lineWidth = 1
-    ctx.moveTo(99, 100+i*30)
-    ctx.lineTo(201, 100+i*30)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    ctx.stroke()
-    ctx.closePath()
-
-# 垂直線
-for i in range(6):
-    ctx.beginPath()
-# 設定線的寬度為 1 個單位
-    ctx.lineWidth = 1
-    ctx.moveTo(100+i*20, 100)
-    ctx.lineTo(100+i*20, 220)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    ctx.stroke()
-    ctx.closePath()
-
-# 1 與 A7
-ctx.beginPath()
-ctx.fillStyle = 'black'
-ctx.strokeStyle = "black"
-ctx.font = "30px Arial"
-ctx.fillText("A7", 100, 70)
-ctx.arc(120, 130, 9, 0, 2*math.pi, False)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-ctx.beginPath()
-ctx.fillStyle = 'white'
-ctx.font = "16px Arial"
-ctx.fillText("1", 115, 135)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-# 3
-ctx.beginPath()
-ctx.fillStyle = 'black'
-ctx.strokeStyle = "black"
-ctx.arc(140, 160, 9, 0, 2*math.pi, False)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-ctx.beginPath()
-ctx.fillStyle = 'white'
-ctx.font = "16px Arial"
-ctx.fillText("3",135, 165)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-# 4
-ctx.beginPath()
-ctx.fillStyle = 'black'
-ctx.strokeStyle = "black"
-ctx.arc(180, 190, 9, 0, 2*math.pi, False)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-ctx.beginPath()
-ctx.fillStyle = 'white'
-ctx.font = "16px Arial"
-ctx.fillText("4", 175, 195)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-# 2
-ctx.beginPath()
-ctx.fillStyle = 'black'
-ctx.strokeStyle = "black"
-ctx.arc(100, 130, 9, 0, 2*math.pi, False)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-ctx.beginPath()
-ctx.fillStyle = 'white'
-ctx.font = "16px Arial"
-ctx.fillText("2", 95, 135)
-ctx.fill()
-ctx.stroke()
-ctx.closePath()
-
-'''
-# 以下將 canvas 畫布內容轉為 img tag, 並且顯示在 container 物件
-img = canvas.toDataURL("image/png")
-# 利用 re.sub, 將原本要直接開圖檔的 data:image 標頭, 改為 data:application/octet-stream, 可直接下載存檔
-# 使用 re 模組之前必須先 import re
-img = re.sub("^data:image\/[^;]", "data:application/octet-stream", img)
-# 宣告 anchor markup attribute download, 可以指定下載儲存檔名
-container <= html.A("save image", href=img, download="guitar_chord.png")
-'''
 </script>
             </div>
             <!-- /.entry-content -->
