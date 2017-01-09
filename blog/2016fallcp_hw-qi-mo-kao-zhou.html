@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>W15 影片心得 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
+    <title>2016fallcp_hw 期末考週 - 2016Fall 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,20 +166,20 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="./w15-ying-pian-xin-de.html">
+<link rel="canonical" href="./2016fallcp_hw-qi-mo-kao-zhou.html">
 
         <meta name="author" content="40523220" />
-        <meta name="keywords" content="W14影片心得" />
-        <meta name="description" content="以下為第14周週影片心得" />
+        <meta name="keywords" content="2016fallcp_hw 期末考週" />
+        <meta name="description" content="第15周程式練習" />
 
         <meta property="og:site_name" content="2016Fall 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="W15 影片心得"/>
-        <meta property="og:url" content="./w15-ying-pian-xin-de.html"/>
-        <meta property="og:description" content="以下為第14周週影片心得"/>
+        <meta property="og:title" content="2016fallcp_hw 期末考週"/>
+        <meta property="og:url" content="./2016fallcp_hw-qi-mo-kao-zhou.html"/>
+        <meta property="og:description" content="第15周程式練習"/>
         <meta property="article:published_time" content="2016-12-19" />
             <meta property="article:section" content="Course" />
-            <meta property="article:tag" content="W14影片心得" />
+            <meta property="article:tag" content="2016fallcp_hw 期末考週" />
             <meta property="article:author" content="40523220" />
 
 
@@ -290,10 +290,10 @@ init_mathjax();
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./w15-ying-pian-xin-de.html"
+                    <a href="./2016fallcp_hw-qi-mo-kao-zhou.html"
                        rel="bookmark"
-                       title="Permalink to W15 影片心得">
-                        W15 影片心得
+                       title="Permalink to 2016fallcp_hw 期末考週">
+                        2016fallcp_hw 期末考週
                     </a>
                 </h1>
             </header>
@@ -311,16 +311,110 @@ init_mathjax();
 
 
 <span class="label label-default">Tags</span>
-	<a href="./tag/w14ying-pian-xin-de.html">W14影片心得</a>
+	<a href="./tag/2016fallcp_hw-qi-mo-kao-zhou.html">2016fallcp_hw 期末考週</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>以下為第14周週影片心得</p>
+                <p>第15周程式練習</p>
 
 
-<p>leo 檔案 settings節點用法:使用2個節點設定頁面</p>
-<p>(1)ctrl u , (2)ctrl d , (3)ctrl l , (4)ctrl r , (5)ctrl i等指令用法:(1)把子節點上移一格(2)把子節點下移一格(3)把子節點左移一格(4)把子節點右移一格(5)建立新的子節點</p>
-<p>button的功能:轉檔</p>
+<!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<div id="ex1"></div>
+
+<script type="text/python3">
+from browser import document as doc
+container=doc['ex1']
+
+container<="w14練習"
+</script>
+
+<div id="ex2"></div>
+
+<script type="text/python3">
+from browser import document as doc
+from browser import html
+container = doc['ex2']
+mystring = input("要印出甚麼字串?")
+mynum = input("要印幾次?")
+
+for i in range(int(mynum)):
+    #container<="W14練習-2"+html.BR()
+    container<=mystring+html.BR()
+</script>
+
+<p>w16 遊戲程式練習</p>
+<!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
+<!-- 啟動 Brython -->
+
+<script>
+window.onload=function(){
+brython(1);
+}
+</script>
+
+<!-- 以下實際利用  Brython 畫圖 -->
+
+<div id="con"></div>
+
+<script type="text/python3">
+from browser import alert
+from browser import document
+from browser import html
+import random
+#print("test")
+#alert("test")
+con1=document["con"]
+標準答案 = random.randint(1, 100)
+你猜的數字=int(input("請輸入你所猜的整數:"))
+猜測次數 = 1
+while 標準答案 != 你猜的數字:
+    if 標準答案 < 你猜的數字:
+        print("太大了 , 在猜一次:)加油")
+    else:
+        print("太小了 , 在猜一次:)加油")
+    你猜的數字=int(input("請輸入你所猜的整數:"))
+    猜測次數 += 1
+
+print("猜對了 ! 總共猜了",猜測次數, "次")
+
+'''   
+'''
+con1 <= str(標準答案)
+'''
+try:
+    for i in range(1):
+        #con1<="test" +"<br/>"
+        yourInput=int(input("請輸入一個整數!"))
+        con1<="test" +html.BR()
+        output = yourInput + 1
+        con1 <= "你輸入的整數加上1之後,為" +str(output)
+except:
+    con1 <= "拜託請輸入整數!"
+'''
+def b1(e):
+    alert("click123")
+document["b1"].bind("click", b1)
+</script>
+
+<p><button id="b1">玩猜數字遊戲</button></p>
             </div>
             <!-- /.entry-content -->
         </article>

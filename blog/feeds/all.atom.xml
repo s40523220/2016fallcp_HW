@@ -60,7 +60,106 @@ def b1(e):
 document["b1"].bind("click", b1)
 &lt;/script&gt;
 
-&lt;p&gt;&lt;button id="b1"&gt;玩猜數字遊戲&lt;/button&gt;&lt;/p&gt;</summary><category term="遊戲"></category></entry><entry><title>W15 影片心得</title><link href="./w15-ying-pian-xin-de.html" rel="alternate"></link><published>2016-12-19T14:15:00+08:00</published><updated>2016-12-19T14:15:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-12-19:./w15-ying-pian-xin-de.html</id><summary type="html">&lt;p&gt;以下為第14周週影片心得&lt;/p&gt;
+&lt;p&gt;&lt;button id="b1"&gt;玩猜數字遊戲&lt;/button&gt;&lt;/p&gt;</summary><category term="遊戲"></category></entry><entry><title>2016fallcp_hw 期末考週</title><link href="./2016fallcp_hw-qi-mo-kao-zhou.html" rel="alternate"></link><published>2016-12-19T14:15:00+08:00</published><updated>2016-12-19T14:15:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-12-19:./2016fallcp_hw-qi-mo-kao-zhou.html</id><summary type="html">&lt;p&gt;第15周程式練習&lt;/p&gt;
+
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;div id="ex1"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+container=doc['ex1']
+
+container&lt;="w14練習"
+&lt;/script&gt;
+
+&lt;div id="ex2"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+container = doc['ex2']
+mystring = input("要印出甚麼字串?")
+mynum = input("要印幾次?")
+
+for i in range(int(mynum)):
+    #container&lt;="W14練習-2"+html.BR()
+    container&lt;=mystring+html.BR()
+&lt;/script&gt;
+
+&lt;p&gt;w16 遊戲程式練習&lt;/p&gt;
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
+&lt;div id="con"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import alert
+from browser import document
+from browser import html
+import random
+#print("test")
+#alert("test")
+con1=document["con"]
+標準答案 = random.randint(1, 100)
+你猜的數字=int(input("請輸入你所猜的整數:"))
+猜測次數 = 1
+while 標準答案 != 你猜的數字:
+    if 標準答案 &lt; 你猜的數字:
+        print("太大了 , 在猜一次:)加油")
+    else:
+        print("太小了 , 在猜一次:)加油")
+    你猜的數字=int(input("請輸入你所猜的整數:"))
+    猜測次數 += 1
+
+print("猜對了 ! 總共猜了",猜測次數, "次")
+
+'''   
+'''
+con1 &lt;= str(標準答案)
+'''
+try:
+    for i in range(1):
+        #con1&lt;="test" +"&lt;br/&gt;"
+        yourInput=int(input("請輸入一個整數!"))
+        con1&lt;="test" +html.BR()
+        output = yourInput + 1
+        con1 &lt;= "你輸入的整數加上1之後,為" +str(output)
+except:
+    con1 &lt;= "拜託請輸入整數!"
+'''
+def b1(e):
+    alert("click123")
+document["b1"].bind("click", b1)
+&lt;/script&gt;
+
+&lt;p&gt;&lt;button id="b1"&gt;玩猜數字遊戲&lt;/button&gt;&lt;/p&gt;</summary><category term="2016fallcp_hw 期末考週"></category></entry><entry><title>W15 影片心得</title><link href="./w15-ying-pian-xin-de.html" rel="alternate"></link><published>2016-12-19T14:15:00+08:00</published><updated>2016-12-19T14:15:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-12-19:./w15-ying-pian-xin-de.html</id><summary type="html">&lt;p&gt;以下為第14周週影片心得&lt;/p&gt;
 
 
 &lt;p&gt;leo 檔案 settings節點用法:使用2個節點設定頁面&lt;/p&gt;
@@ -628,6 +727,24 @@ ctx.strokeStyle = "blue"
 ctx.stroke()
 ctx.closePath()
 &lt;/script&gt;</summary><category term="Brython"></category></entry><entry><title>2016Fall w7 四連桿機構模擬</title><link href="./2016fall-w7-si-lian-gan-ji-gou-mo-ni.html" rel="alternate"></link><published>2016-10-27T12:00:00+08:00</published><updated>2016-10-27T12:00:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-10-27:./2016fall-w7-si-lian-gan-ji-gou-mo-ni.html</id><summary type="html">&lt;p&gt;已經四連桿各桿尺寸, 當機構繞行一圈後求特定點的座標, 以 Solvespace 進行點座標追蹤存檔, 得到 &lt;a href="./../w7/w7_fourbar.csv"&gt;w7_fourbar.csv&lt;/a&gt;, 根據下圖, 試驗證 Solvespace 機構模擬的資料之正確性.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;img src="./../w7/cadp_w7_fourbar.png" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Solvespace 四連桿圖檔:&lt;/p&gt;
+&lt;p&gt;&lt;a href="./../w7/w7_fourbar.slvs"&gt;w7_fourbar.slvs&lt;/a&gt; (請以滑鼠右鍵存檔)&lt;/p&gt;
+&lt;p&gt;參考: &lt;a href="http://mechanicalexpressions.com/explore/kinematics/4-bar-linkage.html"&gt;http://mechanicalexpressions.com/explore/kinematics/4-bar-linkage.html&lt;/a&gt;&lt;/p&gt;</summary><category term="fourbar"></category></entry><entry><title>2016Fall w7 四連桿機構模擬</title><link href="./2016fall-w7-si-lian-gan-ji-gou-mo-ni.html" rel="alternate"></link><published>2016-10-27T12:00:00+08:00</published><updated>2016-10-27T12:00:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-10-27:./2016fall-w7-si-lian-gan-ji-gou-mo-ni.html</id><summary type="html">&lt;p&gt;已經四連桿各桿尺寸, 當機構繞行一圈後求特定點的座標, 以 Solvespace 進行點座標追蹤存檔, 得到 &lt;a href="./../w7/w7_fourbar.csv"&gt;w7_fourbar.csv&lt;/a&gt;, 根據下圖, 試驗證 Solvespace 機構模擬的資料之正確性.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;img src="./../w7/cadp_w7_fourbar.png" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Solvespace 四連桿圖檔:&lt;/p&gt;
+&lt;p&gt;&lt;a href="./../w7/w7_fourbar.slvs"&gt;w7_fourbar.slvs&lt;/a&gt; (請以滑鼠右鍵存檔)&lt;/p&gt;
+&lt;p&gt;參考: &lt;a href="http://mechanicalexpressions.com/explore/kinematics/4-bar-linkage.html"&gt;http://mechanicalexpressions.com/explore/kinematics/4-bar-linkage.html&lt;/a&gt;&lt;/p&gt;</summary><category term="fourbar"></category></entry><entry><title>2016Fall w7 四連桿機構模擬</title><link href="./2016fall-w7-si-lian-gan-ji-gou-mo-ni.html" rel="alternate"></link><published>2016-10-27T12:00:00+08:00</published><updated>2016-10-27T12:00:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-10-27:./2016fall-w7-si-lian-gan-ji-gou-mo-ni.html</id><summary type="html">&lt;p&gt;已經四連桿各桿尺寸, 當機構繞行一圈後求特定點的座標, 以 Solvespace 進行點座標追蹤存檔, 得到 &lt;a href="./../w7/w7_fourbar.csv"&gt;w7_fourbar.csv&lt;/a&gt;, 根據下圖, 試驗證 Solvespace 機構模擬的資料之正確性.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;img src="./../w7/cadp_w7_fourbar.png" width="600" /&gt;&lt;/p&gt;
+&lt;p&gt;Solvespace 四連桿圖檔:&lt;/p&gt;
+&lt;p&gt;&lt;a href="./../w7/w7_fourbar.slvs"&gt;w7_fourbar.slvs&lt;/a&gt; (請以滑鼠右鍵存檔)&lt;/p&gt;
+&lt;p&gt;參考: &lt;a href="http://mechanicalexpressions.com/explore/kinematics/4-bar-linkage.html"&gt;http://mechanicalexpressions.com/explore/kinematics/4-bar-linkage.html&lt;/a&gt;&lt;/p&gt;</summary><category term="fourbar"></category></entry><entry><title>2016Fall w7 四連桿機構模擬</title><link href="./2016fall-w7-si-lian-gan-ji-gou-mo-ni.html" rel="alternate"></link><published>2016-10-27T12:00:00+08:00</published><updated>2016-10-27T12:00:00+08:00</updated><author><name>40523220</name></author><id>tag:,2016-10-27:./2016fall-w7-si-lian-gan-ji-gou-mo-ni.html</id><summary type="html">&lt;p&gt;已經四連桿各桿尺寸, 當機構繞行一圈後求特定點的座標, 以 Solvespace 進行點座標追蹤存檔, 得到 &lt;a href="./../w7/w7_fourbar.csv"&gt;w7_fourbar.csv&lt;/a&gt;, 根據下圖, 試驗證 Solvespace 機構模擬的資料之正確性.&lt;/p&gt;
 
 
 &lt;p&gt;&lt;img src="./../w7/cadp_w7_fourbar.png" width="600" /&gt;&lt;/p&gt;
